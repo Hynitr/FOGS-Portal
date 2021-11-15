@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2021 at 05:03 PM
+-- Generation Time: Nov 15, 2021 at 05:55 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -51,7 +51,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`Admin No.`, `Password`, `id`, `school`, `website`, `alias`, `adm`, `tel`, `addr`, `tagline`, `blksmsname`, `stud`, `admn`, `staf`, `emal`, `session`) VALUES
-('pms/admin', '8f96e4f5fcff936298f13a4b8db8a242', 1, 'CMS Demo', 'https://admincms.dotdemo.com.ng', 'Demo', 'DOT', '09010484986', 'Ikole-Ekiti, Ekiti State.', 'Building business web confidence...', 'Doteightplus', 'http://localhost/software/DemoSCMS/student', 'http://localhost/software/DemoSCMS/admin', 'http://localhost/software/DemoSCMS/staff', 'info@dotdemo.com.ng', '2021/2022');
+('fgs/admin', '8f96e4f5fcff936298f13a4b8db8a242', 1, 'Fountain of Gold School', 'http://localhost/jobs/fgsportal/admin', 'Demo', 'DOT', '09010484986', 'Ikole-Ekiti, Ekiti State.', 'Building business web confidence...', 'Doteightplus', 'http://localhost/software/DemoSCMS/student', 'http://localhost/software/DemoSCMS/admin', 'http://localhost/software/DemoSCMS/staff', 'info@dotdemo.com.ng', '2021/2022');
 
 -- --------------------------------------------------------
 
@@ -130,14 +130,6 @@ CREATE TABLE `motor` (
   `ses` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `motor`
---
-
-INSERT INTO `motor` (`id`, `term`, `class`, `admno`, `attendance`, `punctuality`, `honesty`, `neatness`, `nonaggr`, `leader`, `relation`, `sport`, `societies`, `youth`, `aesth`, `principal`, `mrkpos`, `mrkobt`, `perc`, `totgra`, `tso`, `tsa`, `tsp`, `ses`) VALUES
-(149, '1st Term', 'Creche', 'DOT/STUD/2021/1001', '1', '1', 1, '1', '1', '1', '1', '1', '1', '1', '1', 'An enthusiastic learner who seems to enjoy school.', '200', '154', '77%', 'A1 - Excellent', '1', '1', '1', '2021/2022'),
-(150, '1st Term', 'Creche', 'DOT/STUD/2021/1001', '1', '1', 1, '1', '1', '1', '1', '1', '1', '1', '1', 'An enthusiastic learner who seems to enjoy school.', '100', '34', '34%', 'F9 - Fail', '1', '1', '1', '2022/2023');
-
 -- --------------------------------------------------------
 
 --
@@ -163,15 +155,6 @@ CREATE TABLE `result` (
   `ses` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `result`
---
-
-INSERT INTO `result` (`id`, `sn`, `class`, `admno`, `name`, `subject`, `test`, `ass`, `classex`, `exam`, `total`, `position`, `grade`, `remark`, `term`, `ses`) VALUES
-(1544, '1', 'Creche', 'DOT/STUD/2021/1001', 'Greatness Abolade Olatomiwa', 'Mathematics', '10', '10', '10', '60', '90', '1st', 'A*', 'Distinction', '1st Term', '2021/2022'),
-(1545, '1', 'Creche', 'DOT/STUD/2021/1001', 'Greatness Abolade Olatomiwa', 'Chemistry40', '8', '8', '8', '40', '64', '2nd', 'B3', 'Good', '1st Term', '2021/2022'),
-(1546, '1', 'Creche', 'DOT/STUD/2021/1001', 'Greatness Abolade Olatomiwa', 'Mathematics', '10', '3', '1', '20', '34', '2nd', 'F9', 'Fail', '1st Term', '2022/2023');
-
 -- --------------------------------------------------------
 
 --
@@ -188,13 +171,6 @@ CREATE TABLE `score` (
   `id` int(11) NOT NULL,
   `ses` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `score`
---
-
-INSERT INTO `score` (`admno`, `class`, `subject`, `fscore`, `sndscore`, `tscore`, `id`, `ses`) VALUES
-('DOT/STUD/2021/1001', 'Creche', 'Mathematics', '34', '0', '0', 823, '2022/2023');
 
 -- --------------------------------------------------------
 
@@ -230,9 +206,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `ses`) VALUES
-(1, '2020/2021'),
-(2, '2021/2022'),
-(5, '2022/2023');
+(2, '2021/2022');
 
 -- --------------------------------------------------------
 
@@ -288,8 +262,24 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`sn`, `id`, `staffcode`, `staffno`, `staffid`, `qrid`, `title`, `surname`, `firstname`, `othername`, `date`, `month`, `year`, `gender`, `tertiary`, `discipline`, `category`, `staffpost`, `staffclass`, `subject`, `salary`, `transport`, `medical`, `gross`, `datereg`, `qual`, `marital`, `nok`, `relation`, `nokocc`, `radd`, `nokradd`, `tel1`, `tel2`, `passport`, `qrcode`, `admletter`, `idcard`, `active`, `bday`) VALUES
-('', 22, '', '1000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00', '', '', '', '', '', '', '', '', '', '', '', 'DMSSTAFF20211001.pdf', '', '9', '0'),
-('1', 27, 'DOT/STAFF/2021/', '1001', 'DOT/STAFF/2021/1001', 'b024af816426dcba3d33e2ed6b6682d4', 'Miss', 'Greatness', 'Abolade', 'Olatomiwa', '27', '02', '2021', 'Male', 'Taidob', 'Mathematics', 'Teaching Staff', 'Class Teacher', 'Creche', 'Physics', '10000', '0', '0', '10000', '2021-11-14 10:06:50', 'NCE', 'Single', 'Mr and Mrs Abolade', 'Husband', 'Staff', 'DotEightPlus Secretariat,Ikole', 'asada', '09010484986', '07062594230', 'WhatsApp Image 2021-11-13 at 4.47.35 PM.jpeg', 'DOTSTAFF20211001.png', 'DOTSTAFF20211001.pdf', 'upload/IdCard/DOTSTAFF20211001.php', '0', '0');
+('', 22, '', '1000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00', '', '', '', '', '', '', '', '', '', '', '', 'DMSSTAFF20211001.pdf', '', '9', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staffattend`
+--
+
+CREATE TABLE `staffattend` (
+  `id` int(11) NOT NULL,
+  `staffid` text NOT NULL,
+  `qrid` text NOT NULL,
+  `name` text NOT NULL,
+  `timein` time NOT NULL,
+  `timeout` time NOT NULL,
+  `date` date NOT NULL,
+  `month` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -339,8 +329,7 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `sn`, `Admincode`, `Admission No.`, `AdminID`, `qrid`, `SurName`, `Middle Name`, `Last Name`, `Date`, `Month`, `Year`, `Gender`, `cbk`, `suF`, `schlst`, `parent`, `relation`, `occupation`, `SchF`, `AcF`, `Telephone1`, `Address 1`, `Address 2`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `Passport`, `admletter`, `qrcode`, `idcard`, `bday`) VALUES
-(136, '', '', '1000', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '9', '', 'DMSSTUD20211001.pdf', '', 'upload/IdCard/.php', '0'),
-(157, '1', 'DOT/STUD/2021/', '1001', 'DOT/STUD/2021/1001', '58551485e4adc7081ba6c7198dbf952e', 'Greatness', 'Abolade', 'Olatomiwa', 27, 2, 2002, 'Male', '', '', 'Taidob', 'Mr and Mrs Abolade', 'Guardian', 'Staff', '', '', '4433', 'DotEightPlus Secretariat,Ikole', '', '4244', '2021-11-14', 'Creche', 'Null', '0', 'WhatsApp Image 2021-11-13 at 4.47.35 PM.jpeg', 'DOTSTUD20211001.pdf', 'DOTSTUD20211001.png', 'upload/IdCard/DOTSTUD20211001.php', '0');
+(136, '', '', '1000', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '9', '', 'DMSSTUD20211001.pdf', '', 'upload/IdCard/.php', '0');
 
 -- --------------------------------------------------------
 
@@ -357,14 +346,6 @@ CREATE TABLE `upassignment` (
   `class` text NOT NULL,
   `adminid` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `upassignment`
---
-
-INSERT INTO `upassignment` (`sn`, `id`, `file`, `name`, `date`, `class`, `adminid`) VALUES
-(0, 6, 'students.pdf', 'Greatness Abolade', '2021-11-15 03:28:53', 'Creche', 'DOT/STUD/2021/1001'),
-(0, 7, 'mondaymotivation.png', 'Greatness Abolade', '2021-11-15 04:59:45', 'Creche', 'DOT/STUD/2021/1001');
 
 --
 -- Indexes for dumped tables
@@ -422,6 +403,12 @@ ALTER TABLE `sessions`
 -- Indexes for table `staff`
 --
 ALTER TABLE `staff`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `staffattend`
+--
+ALTER TABLE `staffattend`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -493,6 +480,12 @@ ALTER TABLE `sessions`
 --
 ALTER TABLE `staff`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `staffattend`
+--
+ALTER TABLE `staffattend`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `students`
