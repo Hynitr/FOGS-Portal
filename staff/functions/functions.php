@@ -588,20 +588,34 @@ echo '<script>window.location.href = "./frn"</script>';
 
 function mover($classr, $cls)  {
 
-
-  if ($cls == 'Basic 1') {
-   $cs = 'Basic 2';
+ if($cls == 'Reception') {
+	$cs = 'Transition';
+ } else {
+if($cls == 'Transition') {
+	$cs = 'Kindergarten';
+} else {
+if($cls == 'Kindergarten') {
+	$cs = 'Nursery 1';
+} else {
+if($cls == 'Nursery 1') {
+	$cs = 'Nursery 2';
+} else {
+if($cls == 'Nursery 2') {
+	$cs = 'Grade 1';
+} else {
+  if ($cls == 'Grade 1') {
+   $cs = 'Grade 2';
   } else {
-  if ($cls == 'Basic 2') {
-   $cs = 'Basic 3';
+  if ($cls == 'Grade 2') {
+   $cs = 'Grade 3';
   } else {
-  if ($cls == 'Basic 3') {
-   $cs = 'Basic 4';
+  if ($cls == 'Grade 3') {
+   $cs = 'Grade 4';
   } else {
-  if ($cls == 'Basic 4') {
-   $cs = 'Basic 5-6';
+  if ($cls == 'Grade 4') {
+   $cs = 'Grade 5';
   } else {
-  if ($cls == 'Basic 5-6') {
+  if ($cls == 'Grade 5') {
    $cs = 'J.S.S 1';
   } else {
   if ($cls == 'J.S.S 1') {
@@ -628,6 +642,11 @@ function mover($classr, $cls)  {
   }
   }
   }
+}
+}
+}
+}
+ }
 	
 	$ssl2 = "UPDATE students SET `Class` = '$cs' WHERE `AdminID` = '$classr'";
 	$ress2 = query($ssl2);	
