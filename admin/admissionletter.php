@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="icon" href="dist/img/logo.png" type="image/ico" />
-    <title>Admission Letter</title>
-</head>
-
-</html>
 <?php
 require ("functions/init.php");
 if (isset($_SESSION['code'])) {

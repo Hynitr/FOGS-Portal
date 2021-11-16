@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="icon" href="dist/img/favicon2.ico" type="image/ico" />
-    <title>Employment Letter</title>
-</head>
-
-</html>
 <?php
 require ("functions/init.php");
 if (isset($_SESSION['staffid'])) {
