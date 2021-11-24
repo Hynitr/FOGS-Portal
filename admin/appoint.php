@@ -183,6 +183,7 @@ include("functions/top.php");
                                 <div class="form-group">
                                     <label>Staff Class.:</label>
                                     <select name="class" id="class" class="custom-select">
+                                        <option name="class" id="class">Null</option>
                                         <option name="class" id="class">Reception</option>
                                         <option name="class" id="class">Transition</option>
                                         <option name="class" id="class">Kindergarten</option>
