@@ -40,16 +40,16 @@ include("functions/top.php");
                         <div class="form-group">
                             <label for="exampleInputPassword1">Select a Class .:</label>
                             <select name="ressbj" id="res" class="form-control">
-                                <option name="class" id="res">Creche</option>
-                                <option name="class" id="res">KG 1</option>
-                                <option name="class" id="res">KG 2</option>
+                                <option name="class" id="res">Reception</option>
+                                <option name="class" id="res">Transition</option>
+                                <option name="class" id="res">Kindergarten</option>
                                 <option name="class" id="res">Nursery 1</option>
                                 <option name="class" id="res">Nursery 2</option>
-                                <option name="class" id="res">Basic 1</option>
-                                <option name="class" id="res">Basic 2</option>
-                                <option name="class" id="res">Basic 3</option>
-                                <option name="class" id="res">Basic 4</option>
-                                <option name="class" id="res">Basic 5</option>
+                                <option name="class" id="res">Grade 1</option>
+                                <option name="class" id="res">Grade 2</option>
+                                <option name="class" id="res">Grade 3</option>
+                                <option name="class" id="res">Grade 4</option>
+                                <option name="class" id="res">Grade 5</option>
                                 <option name="class" id="res">J.S.S 1</option>
                                 <option name="class" id="res">J.S.S 2</option>
                                 <option name="class" id="res">J.S.S 3</option>
