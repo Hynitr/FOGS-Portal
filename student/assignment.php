@@ -1,4 +1,4 @@
-<?php include("functions/top.php");
+d<?php include("functions/top.php");
 
 //get staff class
 $sql="SELECT * from students WHERE `AdminID` = '".$_SESSION['AdminID']."'";
