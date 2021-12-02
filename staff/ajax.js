@@ -257,6 +257,7 @@ $(document).ready(function () {
     var perci = $("#perci").val();
     var tog = $("#tog").val();
     var prof = $("#pro").val();
+    var resm = $("#resmes").val();
 
     if (attd == null || attd == "") {
       $(toastr.error("Attendance field is empty"));
@@ -412,6 +413,7 @@ $(document).ready(function () {
                                                       tog: tog,
                                                       prof: prof,
                                                       ses: ses,
+                                                      resm: resm,
                                                     },
                                                     success: function (data) {
                                                       $(

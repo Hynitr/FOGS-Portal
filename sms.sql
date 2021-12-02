@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2021 at 05:55 PM
+-- Generation Time: Dec 01, 2021 at 04:17 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -127,7 +127,8 @@ CREATE TABLE `motor` (
   `tso` text NOT NULL,
   `tsa` text NOT NULL,
   `tsp` text NOT NULL,
-  `ses` text NOT NULL
+  `ses` text NOT NULL,
+  `resm` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -171,6 +172,14 @@ CREATE TABLE `score` (
   `id` int(11) NOT NULL,
   `ses` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `score`
+--
+
+INSERT INTO `score` (`admno`, `class`, `subject`, `fscore`, `sndscore`, `tscore`, `id`, `ses`) VALUES
+('DOT/STUD/2021/1001', 'Reception', 'Mathematics', '69', '0', '0', 824, '2021/2022'),
+('DOT/STUD/2021/1001', 'Reception', 'Chemistry', '44', '0', '0', 825, '2021/2022');
 
 -- --------------------------------------------------------
 
@@ -262,7 +271,8 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`sn`, `id`, `staffcode`, `staffno`, `staffid`, `qrid`, `title`, `surname`, `firstname`, `othername`, `date`, `month`, `year`, `gender`, `tertiary`, `discipline`, `category`, `staffpost`, `staffclass`, `subject`, `salary`, `transport`, `medical`, `gross`, `datereg`, `qual`, `marital`, `nok`, `relation`, `nokocc`, `radd`, `nokradd`, `tel1`, `tel2`, `passport`, `qrcode`, `admletter`, `idcard`, `active`, `bday`) VALUES
-('', 22, '', '1000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00', '', '', '', '', '', '', '', '', '', '', '', 'DMSSTAFF20211001.pdf', '', '9', '0');
+('', 22, '', '1000', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00', '', '', '', '', '', '', '', '', '', '', '', 'DMSSTAFF20211001.pdf', '', '9', '0'),
+('1', 28, 'DOT/STAFF/2021/', '1001', 'DOT/STAFF/2021/1001', 'b024af816426dcba3d33e2ed6b6682d4', 'Miss', 'Greatness', 'Abolade', 'Olatomiwa', '23', '02', '2021', 'Male', 'Federal University Oye-Ekiti', 'Mathematics', 'Teaching Staff', 'Class Teacher', 'Reception', 'Physics', '27000', '0', '0', '27000', '2021-11-24 09:27:22', 'HND', 'Single', 'Mr and Mrs Abolade', 'Mr and Mrs Abolade', 'Staff', 'DotEightPlus Secretariat,Ikole', 'DotEightPlus Secretariat,Ikole', '09121132025', '09121132025', '1591977058757.jpg', 'DOTSTAFF20211001.png', 'DOTSTAFF20211001.pdf', 'upload/IdCard/DOTSTAFF20211001.php', '0', '');
 
 -- --------------------------------------------------------
 
@@ -329,7 +339,8 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `sn`, `Admincode`, `Admission No.`, `AdminID`, `qrid`, `SurName`, `Middle Name`, `Last Name`, `Date`, `Month`, `Year`, `Gender`, `cbk`, `suF`, `schlst`, `parent`, `relation`, `occupation`, `SchF`, `AcF`, `Telephone1`, `Address 1`, `Address 2`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `Passport`, `admletter`, `qrcode`, `idcard`, `bday`) VALUES
-(136, '', '', '1000', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '9', '', 'DMSSTUD20211001.pdf', '', 'upload/IdCard/.php', '0');
+(136, '', '', '1000', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', '', '', '9', '', 'DMSSTUD20211001.pdf', '', 'upload/IdCard/.php', '0'),
+(158, '1', 'DOT/STUD/2021/', '1001', 'DOT/STUD/2021/1001', '58551485e4adc7081ba6c7198dbf952e', 'Greatness', 'Abolade', 'Olatomiwa', 20, 2, 2000, 'Male', '1', '', 'Federal University Oye-Ekiti', 'Mr and Mrs Abolade', 'Guardian', 'Staff', '', '', '5353666', 'DotEightPlus Secretariat,Ikole', '', '47777747', '2021-11-24', 'Reception', 'Null', '0', '1591977058757.jpg', 'DOTSTUD20211001.pdf', 'DOTSTUD20211001.png', 'upload/IdCard/DOTSTUD20211001.php', '');
 
 -- --------------------------------------------------------
 
@@ -449,19 +460,19 @@ ALTER TABLE `entrance`
 -- AUTO_INCREMENT for table `motor`
 --
 ALTER TABLE `motor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
 
 --
 -- AUTO_INCREMENT for table `result`
 --
 ALTER TABLE `result`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1547;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1549;
 
 --
 -- AUTO_INCREMENT for table `score`
 --
 ALTER TABLE `score`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=824;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=826;
 
 --
 -- AUTO_INCREMENT for table `security`
@@ -479,7 +490,7 @@ ALTER TABLE `sessions`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `staffattend`
@@ -491,7 +502,7 @@ ALTER TABLE `staffattend`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT for table `upassignment`

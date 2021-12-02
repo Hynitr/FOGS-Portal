@@ -331,7 +331,10 @@ echo '<input type="text" name="year" id="pro" value="null" class="form-control" 
                                         <?php
 }
 ?>
-
+                                        <div class="form-group col-md-3">
+                                            <label for="exampleInputEmail1">School Resumes .:</label>
+                                            <input type="date" name="resmes" id="resmes" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
 

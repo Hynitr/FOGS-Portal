@@ -80,7 +80,7 @@ $qw2  = mysqli_fetch_array($res2);
 
 <body>
     <div class="text-center">
-        <h1><img style="width: 50px; height: 50px;" src="dist/img/logo.png"> <?php echo $call['school'] ?></h1>
+        <h1><img style="width: 50px; height: 50px;" src="dist/img/logo.png"> <b><?php echo $call['school'] ?></b></h1>
         <h6><b>Gov`t Approved</b></h6>
         <h5><?php echo $call['addr'] ?></h5>
         <h6><b>Tel.: <?php echo $call['tel'] ?> &nbsp; &nbsp; &nbsp; Website.: <?php echo $call['website'] ?> &nbsp;
@@ -102,25 +102,29 @@ $qw2  = mysqli_fetch_array($res2);
             <h5 class="col-sm-6">Admission Number.: <b><?php echo $data ?></b></h5>
             <h5 class="col-sm-6">Class.: <b><?php echo $cls ?></b></h5>
             <h5 class="col-sm-6">No on Roll.: <b><?php echo $qw1['altol'] ?></b></h5>
-            <h5 class="col-sm-6">Times School Opened.: <b><?php echo $row3['tso'] ?></b></h5>
             <h5 class="col-sm-6">Times Absent.: <b><?php echo $row3['tsa'] ?></b></h5>
+            <h5 class="col-sm-6">School Resumes.:
+                <b><?php echo date('l, F d, Y ', strtotime($row3['resm'])); ?></b>
+            </h5>
             <!-- <h5 class="col-sm-6">Times Present.: <?php echo $row3['tsp'] ?></h5> -->
         </div>
     </div>
     <br />
     <table class="table table-hover text-center table-bordered table-striped">
+
+
         <tr>
             <th>Subject</th>
-            <th>Test<br>(10)</th>
-            <th>Assignment<br>(10)</th>
-            <th>Class Exercise<br>(10)</th>
+            <th width="90px">CAT 1 <br />(10)</th>
+            <th width="90px">CAT 2 <br />(10)</th>
+            <th width="90px">CAT 3<br>(10)</th>
             <th>Exam Score<br>(70)</th>
             <th>Total<br>(100)</th>
-            <th>1st Term Score</th>
-            <th>2nd Term Score</th>
-            <th>3rd Term Score</th>
-            <th>Annual Score</th>
-            <th>Position in Class</th>
+            <th>1st Term <br />Score</th>
+            <th>2nd Term <br />Score</th>
+            <th>3rd Term <br />Score</th>
+            <th>Annual <br />Score</th>
+            <th>Position</th>
             <th>Grade</th>
             <th>Remark</th>
         </tr>
@@ -191,36 +195,37 @@ if(row_count($result_set2) == "") {
             <td><?php echo $row2['attendance'] ?></td>
             <td>Sport</td>
             <td><?php echo $row2['sport'] ?></td>
-            <td>Mark Possible.: &nbsp;&nbsp; <?php echo $row2['mrkpos'] ?></td>
-            <td>Mark Obtained.: &nbsp;&nbsp; <?php echo $row2['mrkobt'] ?></td>
+            <td><b>Mark Possible .:</b> &nbsp;&nbsp; <?php echo $row2['mrkpos'] ?></td>
+            <td><b>Mark Obtained .:</b> &nbsp;&nbsp; <?php echo $row2['mrkobt'] ?></td>
         </tr>
         <tr>
             <td>Punctuality</td>
             <td><?php echo $row2['punctuality'] ?></td>
             <td>Societies</td>
             <td><?php echo $row2['societies'] ?></td>
-            <td colspan="2">Percentage.: &nbsp;&nbsp; <?php echo $row2['perc'] ?></td>
+            <td colspan="2"><b>Percentage .:</b> &nbsp;&nbsp; <?php echo $row2['perc'] ?></td>
         </tr>
         <tr>
             <td>Honesty</td>
             <td><?php echo $row2['honesty'] ?></td>
             <td>Youth Organ</td>
             <td><?php echo $row2['youth'] ?></td>
-            <td>Total Grade.: &nbsp;&nbsp; <?php echo $row2['totgra'] ?></td>
+            <td><b>Total Grade.:</b> &nbsp;&nbsp; <?php echo $row2['totgra'] ?></td>
             <?php
-            if (isset($_SESSION['rep'])) {
-                $wed = $_SESSION['rep'];
-
-                echo 'td>'.$wed.'</td>';
-            }
-            ?>
+    if (isset($_SESSION['rep'])) {
+   $wed = $_SESSION['rep'];
+   echo '<td>'.$wed.'</td>';
+} else {
+    echo '<td></td>';
+}    
+?>
         </tr>
         <tr>
             <td>Neatness</td>
             <td><?php echo $row2['neatness'] ?></td>
             <td>Aesthetics</td>
             <td><?php echo $row2['aesth'] ?></td>
-            <td colspan="2" rowspan="6">Principal Comment.: &nbsp;&nbsp; <?php echo $row2['principal'] ?></td>
+            <td colspan="2" rowspan="6"><b>Principal Comment.:</b> &nbsp;&nbsp; <?php echo $row2['principal'] ?></td>
         </tr>
         <tr>
             <td>Non-Aggressive</td>
@@ -241,6 +246,7 @@ if(row_count($result_set2) == "") {
     </table>
 
 </body>
+
 <script type="text/javascript">
 window.addEventListener("load", window.print());
 </script>
