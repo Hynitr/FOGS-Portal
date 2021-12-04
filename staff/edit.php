@@ -84,19 +84,19 @@ $hrt = $wsa['tot'];
                         <div class="form-group">
                             <div class="row">
                                 <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">Test(10) .:</label>
+                                    <label for="exampleInputEmail1">CAT 1(10) .:</label>
                                     <input type="number" name="date" id="test" value="<?php echo $row['test']; ?>"
                                         placeholder="Test(10)" class="form-control">
                                 </div>
                                 <!-- /.input group -->
                                 <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">Assignment(10).:</label>
+                                    <label for="exampleInputEmail1">CAT 2(10).:</label>
                                     <input type="number" name="month" id="ass" value="<?php echo $row['ass']; ?>"
                                         placeholder="Assignment(10)" class="form-control">
                                 </div>
                                 <!-- /.input group -->
                                 <div class="for-group col-md-2">
-                                    <label for="exampleInputEmail1">Class Exercise(10).:</label>
+                                    <label for="exampleInputEmail1">CAT 3(10).:</label>
                                     <input type="number" name="year" id="exc" value="<?php echo $row['classex']; ?>"
                                         placeholder="Exercise(10)" class="form-control">
                                 </div>

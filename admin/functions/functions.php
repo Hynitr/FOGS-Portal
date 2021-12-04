@@ -162,15 +162,15 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
 
 	$datereg = date("Y-m-d h:i:sa");
 
-	$sql = "SELECT * FROM students";
+	/*$sql = "SELECT * FROM students";
 	$res = query($sql);
 	while($row = mysqli_fetch_array($res)){
 
 		$x = $row['Admission No.'];
-	}
+	}*/
 
 			
-	$e = "$x" + 1;
+	$e = rand(0, 9999);
 
 	$sch = $_SESSION['cal']['adm'];;
 	$cat = "STUD";
@@ -180,7 +180,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
 	$d = md5($code);
 
 	//send message to new parent
-	$c = "Dear ".$paren.", welcome to ".$_SESSION['cal']['school']." Thank you for entrusting your child education with us";
+	/*$c = "Dear ".$paren.", welcome to ".$_SESSION['cal']['school']." Thank you for entrusting your child education with us";
 	$f = $_SESSION['cal']['blksmsname'];
 	  
 	$z = $dnu." ".$mnu;
@@ -207,7 +207,7 @@ function enrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $
    } else {
 
 	echo 'Loading.. Please wait';
-   }	
+   }*/	
 
 $sql2 = "INSERT INTO students(`Admincode`, `AdminID`, `Admission No.`, `sn`, `SurName`, `Middle Name`, `Last Name`, `cbk`, `suF`, `Date`, `Month`, `Year`, `Gender`, `schlst`, `parent`, `relation`, `occupation`, `Telephone1`, `Address 1`, `Telephone2`, `Datereg`, `Class`, `Department`, `Active`, `SchF`, `AcF`, `qrid`)";
 $sql2.= " VALUES('$admcode', '$code', '$e', '1', '$sname', '$fname', '$lname', '$rpwor', '$pwor', '$day', '$mont', '$yea', '$gend', '$schl', '$paren', '$rel', '$occ', '$dnu', '$ad', '$mnu', '$datereg', '$cls', '$dep', '0', '$sh', '$ac', '$d')";

@@ -3,17 +3,16 @@ include("functions/init.php");
 
 //echo "https://student.dagloremodelschool.com.ng/qrnt";
 
-$sql = "SELECT * FROM students";
-$res = query($sql);
-while($row = mysqli_fetch_array($res)){
+    $e = rand(0, 9999);
 
-$cls = $row['Class'];
-
-if ($cls == 'S.S.S 2') {
-    echo $cs = 'Basic 2'."<br/>";
-   } else {
-  
-}
+	$sch = $_SESSION['cal']['adm'];;
+	$cat = "STAFF";
+	$year = date("Y");
+	$admcode = "$sch/$cat/$year/";
+	$code = $admcode.$e;
+	$d = md5($code);
+    
+    echo $code.'<br/>'.$d;
 //echo $call['stud']."/qrnt";
   
 //echo strtotime($);

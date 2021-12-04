@@ -80,9 +80,9 @@ $rower = mysqli_fetch_array($res);
                         <thead>
                             <tr class="text-center">
                                 <th>Subject</th>
-                                <th>Assignment</th>
-                                <th>Class Excerice</th>
-                                <th>Test </th>
+                                <th>CAT 1</th>
+                                <th>CAT 2</th>
+                                <th>CAT 3 </th>
                                 <th>Exam</th>
                                 <th>Total</th>
                                 <th>Grade</th>
@@ -162,19 +162,19 @@ $rower = mysqli_fetch_array($res);
                         <div class="form-group">
                             <div class="row">
                                 <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">Test(10) .:</label>
+                                    <label for="exampleInputEmail1">CAT 1(10) .:</label>
                                     <input type="number" name="date" id="test" placeholder="Test(10)"
                                         class="form-control">
                                 </div>
                                 <!-- /.input group -->
                                 <div class="form-group col-md-3">
-                                    <label for="exampleInputEmail1">Assignment(10).:</label>
+                                    <label for="exampleInputEmail1">CAT 2(10).:</label>
                                     <input type="number" name="month" id="ass" placeholder="Assignment(10)"
                                         class="form-control">
                                 </div>
                                 <!-- /.input group -->
                                 <div class="form-group col-md-3">
-                                    <label for="exampleInputEmail1">Class Exercise(10).:</label>
+                                    <label for="exampleInputEmail1">CAT 3(10).:</label>
                                     <input type="number" name="year" id="exc" placeholder="Exercise(10)"
                                         class="form-control">
                                 </div>
