@@ -485,15 +485,15 @@ function appoint($title, $surname, $firstname, $lastname, $date, $month, $year, 
 	$gross   = $bsm + $tam + $mall;
 
 
-	$sql = "SELECT * from staff";
+	/*$sql = "SELECT * from staff";
 	$result = query($sql);
 	while($row = mysqli_fetch_array($result)) {
 	
 		$x = $row['staffno'];		
-	}
+	}*/
 	
 		
-	$e = "$x" + 1;
+	$e = rand(0, 9999);
 
 	$sch = $_SESSION['cal']['adm'];
 	$cat2 = "STAFF";
