@@ -111,9 +111,35 @@ $qw2  = mysqli_fetch_array($res2);
     </div>
     <br />
     <table class="table table-hover text-center table-bordered table-striped">
+        <?php
+
+        if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+
+            echo '
+
+            <tr>
+            <th>Subject</th>
+            <th width="90px">CAT 1 <br />(5)</th>
+            <th width="90px">CAT 2 <br />(5)</th>
+            <th>Exam Score<br>(90)</th>
+            <th>Total<br>(100)</th>
+            <th>1st Term <br />Score</th>
+            <th>2nd Term <br />Score</th>
+            <th>3rd Term <br />Score</th>
+            <th>Annual <br />Score</th>
+            <th>Position</th>
+            <th>Grade</th>
+            <th>Remark</th>
+        </tr>
+
+            ';
 
 
-        <tr>
+        } else {
+
+            echo '
+
+            <tr>
             <th>Subject</th>
             <th width="90px">CAT 1 <br />(10)</th>
             <th width="90px">CAT 2 <br />(10)</th>
@@ -128,7 +154,13 @@ $qw2  = mysqli_fetch_array($res2);
             <th>Grade</th>
             <th>Remark</th>
         </tr>
-        <?php
+            
+            ';
+            
+            
+        }
+
+
 $sql= "SELECT * FROM `result` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses'";
 $result_set=query($sql);
 if(row_count($result_set) == "") {
@@ -152,26 +184,56 @@ if($tms == "1st Term"){
     }
     }
     }
-?>
+    
+    if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+
+        echo '
+
         <tr>
-            <td><?php echo ucwords($row['subject']); ?></td>
-            <td><?php echo $row['test'] ?></td>
-            <td><?php echo $row['ass'] ?></td>
-            <td><?php echo $row['classex'] ?></td>
-            <td><?php echo $row['exam'] ?></td>
-            <td><?php echo $row['total'] ?></td>
-            <td><?php echo $row2['fscore'] ?></td>
-            <td><?php echo $row2['sndscore'] ?></td>
-            <td><?php echo $row2['tscore'] ?></td>
-            <td><?php echo $annual ?></td>
-            <td><?php echo $row['position'] ?></td>
-            <td><?php echo $row['grade'] ?></td>
-            <td><?php echo $row['remark'] ?></td>
+        <td>'.ucwords($row['subject']).'</td>
+        <td>'.$row['test'].'</td>
+        <td>'.$row['ass'].'</td>
+        <td>'.$row['exam'].'</td>
+        <td>'.$row['total'].'</td>
+        <td>'.$row2['fscore'].'</td>
+        <td>'.$row2['sndscore'].'</td>
+        <td>'.$row2['tscore'].'</td>
+        <td>'.$annual.'</td>
+        <td>'.$row['position'].'</td>
+        <td>'.$row['grade'].'</td>
+        <td>'.$row['remark'].'</td>
         </tr>
-        <?php
-}
-}
- ?>
+
+        ';
+
+        } else {
+
+        echo '
+
+        <tr>
+        <td>'.ucwords($row['subject']).'</td>
+        <td>'.$row['test'].'</td>
+        <td>'.$row['ass'].'</td>
+        <td>'.$row['classex'].'</td>
+        <td>'.$row['exam'].'</td>
+        <td>'.$row['total'].'</td>
+        <td>'.$row2['fscore'].'</td>
+        <td>'.$row2['sndscore'].'</td>
+        <td>'.$row2['tscore'].'</td>
+        <td>'.$annual.'</td>
+        <td>'.$row['position'].'</td>
+        <td>'.$row['grade'].'</td>
+        <td>'.$row['remark'].'</td>
+        </tr>
+
+
+        ';
+        }
+
+
+        }
+        }
+        ?>
     </table>
 
     <table style="width: 100%;" class="table table-hover table-bordered table-striped">

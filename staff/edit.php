@@ -81,31 +81,75 @@ $hrt = $wsa['tot'];
                         </div>
 
 
+
                         <div class="form-group">
                             <div class="row">
-                                <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">CAT 1(10) .:</label>
-                                    <input type="number" name="date" id="test" value="<?php echo $row['test']; ?>"
-                                        placeholder="Test(10)" class="form-control">
-                                </div>
-                                <!-- /.input group -->
-                                <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">CAT 2(10).:</label>
-                                    <input type="number" name="month" id="ass" value="<?php echo $row['ass']; ?>"
-                                        placeholder="Assignment(10)" class="form-control">
-                                </div>
-                                <!-- /.input group -->
-                                <div class="for-group col-md-2">
-                                    <label for="exampleInputEmail1">CAT 3(10).:</label>
-                                    <input type="number" name="year" id="exc" value="<?php echo $row['classex']; ?>"
-                                        placeholder="Exercise(10)" class="form-control">
-                                </div>
-                                <!-- /.input group -->
-                                <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">Exam(70) .:</label>
-                                    <input type="number" name="year" id="exam" min="1" max="70"
-                                        value="<?php echo $row['exam']; ?>" placeholder="Exam(70)" class="form-control">
-                                </div>
+                                <?php
+                        if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+
+                            echo ' 
+                            
+                            <div class="form-group col-md-2">
+                                    <label for="exampleInputEmail1">CAT 1(5) .:</label>
+                                    <input type="number" name="date" id="test" value="'.$row['test'].'"
+                                placeholder="CAT 1(5)" class="form-control">
+                            </div>
+                            <!-- /.input group -->
+                            <div class="form-group col-md-2">
+                                <label for="exampleInputEmail1">CAT 2(5).:</label>
+                                <input type="number" name="month" id="ass" value="'.$row['ass'].'"
+                                placeholder="CAT 2(5)" class="form-control">
+                            </div>
+                            <!-- /.input group -->
+                            <div class="for-group col-md-2" hidden>
+                                <label for="exampleInputEmail1">CAT 3(10).:</label>
+                                <input type="number" name="year" id="exc" value="0" placeholder="CAT 3(10"
+                                    class="form-control">
+                            </div>
+                            <!-- /.input group -->
+                            <div class="form-group col-md-2">
+                                <label for="exampleInputEmail1">Exam(90) .:</label>
+                                <input type="number" name="year" id="exam" min="1" max="90"
+                                    value="'.$row['exam'].'" placeholder="Exam(90)" class="form-control">
+                            </div>
+
+
+                            ';
+
+                            } else {
+
+                            echo '
+
+
+                            <div class="form-group col-md-2">
+                                <label for="exampleInputEmail1">CAT 1(10) .:</label>
+                                <input type="number" name="date" id="test" value="'.$row['test'].'"
+                                placeholder="CAT 1(10)" class="form-control">
+                            </div>
+                            <!-- /.input group -->
+                            <div class="form-group col-md-2">
+                                <label for="exampleInputEmail1">CAT 2(10).:</label>
+                                <input type="number" name="month" id="ass" value="'.$row['ass'].'"
+                                placeholder="CAT 2(10)" class="form-control">
+                            </div>
+                            <!-- /.input group -->
+                            <div class="for-group col-md-2">
+                                <label for="exampleInputEmail1">CAT 3(10).:</label>
+                                <input type="number" name="year" id="exc" value="'.$row['classex'].'"
+                                placeholder="CAT 3(10)" class="form-control">
+                            </div>
+                            <!-- /.input group -->
+                            <div class="form-group col-md-2">
+                                <label for="exampleInputEmail1">Exam(70) .:</label>
+                                <input type="number" name="year" id="exam" min="1" max="70"
+                                    value="'.$row['exam'].'" placeholder="Exam(70)" class="form-control">
+                            </div>
+
+                            ';
+                            }
+
+                            ?>
+
                                 <!-- /.input group -->
                                 <div class="form-group col-md-2">
                                     <label for="exampleInputEmail1">Position in Class .:</label>

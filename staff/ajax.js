@@ -30,32 +30,32 @@ $(document).ready(function () {
       $(toastr.error("Subject can`t be empty"));
     } else {
       if (test == null || test == "") {
-        $(toastr.error("Kindly input test score"));
+        $(toastr.error("Kindly input CAT 1 Score"));
       } else {
         if (test > 10) {
-          $(toastr.error("Test score can`t be greater than 10"));
+          $(toastr.error("CAT 1 score can`t be greater than 10"));
         } else {
           if (ass == null || ass == "") {
-            $(toastr.error("Kindly input assignment score"));
+            $(toastr.error("Kindly input CAT 2 score"));
           } else {
             if (ass > 10) {
-              $(toastr.error("Assignment score can`t be greater than 10"));
+              $(toastr.error("CAT 2 score can`t be greater than 10"));
             } else {
               if (exc == null || exc == "") {
-                $(toastr.error("Kindly input class exercise score"));
+                $(toastr.error("Kindly input CAT 3 score"));
               } else {
                 if (exc > 10) {
                   $(
                     toastr.error(
-                      "Class exercise score can`t be greater than 10"
+                      "CAT 3 score can`t be greater than 10"
                     )
                   );
                 } else {
                   if (exam == null || exam == "") {
                     $(toastr.error("Exam can`t be empty"));
                   } else {
-                    if (exam > 70) {
-                      $(toastr.error("Exam score can`t be greater than 70"));
+                    if (exam > 90) {
+                      $(toastr.error("Exam score can`t be greater than 90"));
                     } else {
                       if (position == null || position == "") {
                         $(toastr.error("Position in class field is empty"));
@@ -140,32 +140,32 @@ $(document).ready(function () {
       $(toastr.error("Subject can`t be empty"));
     } else {
       if (test == null || test == "") {
-        $(toastr.error("Kindly input test score"));
+        $(toastr.error("Kindly input CAT 1 score"));
       } else {
         if (test > 10) {
-          $(toastr.error("Test score can`t be greater than 10"));
+          $(toastr.error("CAT 1 score can`t be greater than 10"));
         } else {
           if (ass == null || ass == "") {
-            $(toastr.error("Kindly input assignment score"));
+            $(toastr.error("Kindly input CAT 2 score"));
           } else {
             if (ass > 10) {
-              $(toastr.error("Assignment score can`t be greater than 10"));
+              $(toastr.error("CAT 2 score can`t be greater than 10"));
             } else {
               if (exc == null || exc == "") {
-                $(toastr.error("Kindly input class exercise score"));
+                $(toastr.error("Kindly input CAT 3 score"));
               } else {
                 if (exc > 10) {
                   $(
                     toastr.error(
-                      "Class exercise score can`t be greater than 10"
+                      "CAT 3 score can`t be greater than 10"
                     )
                   );
                 } else {
                   if (exam == null || exam == "") {
                     $(toastr.error("Exam can`t be empty"));
                   } else {
-                    if (exam > 70) {
-                      $(toastr.error("Exam score can`t be greater than 70"));
+                    if (exam > 90) {
+                      $(toastr.error("Exam score can`t be greater than 90"));
                     } else {
                       if (position == null || position == "") {
                         $(toastr.error("Position in class field is empty"));
