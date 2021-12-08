@@ -85,7 +85,7 @@ $hrt = $wsa['tot'];
                         <div class="form-group">
                             <div class="row">
                                 <?php
-                        if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+                        if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
                             echo ' 
                             

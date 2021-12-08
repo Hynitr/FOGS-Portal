@@ -125,7 +125,7 @@ $rower = mysqli_fetch_array($res);
   while($row= mysqli_fetch_array($result_set))
  {
 
-    if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+    if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
         echo '
 
@@ -218,7 +218,7 @@ $rower = mysqli_fetch_array($res);
 
                                 <?php 
 
-                                if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+                                if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
                                     echo '
 

@@ -260,16 +260,16 @@ $(document).ready(function () {
     var resm = $("#resmes").val();
 
     if (attd == null || attd == "") {
-      $(toastr.error("Attendance field is empty"));
+      $(toastr.error("Carrying Out Assignment field is empty"));
     } else {
       if (attd > 5) {
-        $(toastr.error("Max attendance score is 5"));
+        $(toastr.error("Max Carrying Out Assignment score is 5"));
       } else {
         if (punc == null || punc == "") {
-          $(toastr.error("Punctuality field is empty"));
+          $(toastr.error("Politeness field is empty"));
         } else {
           if (punc > 5) {
-            $(toastr.error("Punctuality field value is greater 5"));
+            $(toastr.error("Politeness field value is greater 5"));
           } else {
             if (hons == null || hons == "") {
               $(toastr.error("Honesty field is empty"));
@@ -284,74 +284,74 @@ $(document).ready(function () {
                     $(toastr.error("Neatness field can`t be empty"));
                   } else {
                     if (nonaggr == null || nonaggr == "") {
-                      $(toastr.error("Non-Aggresiveness field can`t be empty"));
+                      $(toastr.error("Self Control field can`t be empty"));
                     } else {
                       if (nonaggr > 5) {
                         $(
                           toastr.error(
-                            "Non-Aggresiveness field value can`t be greater 5"
+                            "Self Control field value can`t be greater 5"
                           )
                         );
                       } else {
                         if (ldsk == null || ldsk == "") {
-                          $(toastr.error("Leadership Skill field is empty"));
+                          $(toastr.error("rganisational Ability field is empty"));
                         } else {
                           if (ldsk > 5) {
                             $(
                               toastr.error(
-                                "Leadership Skill field value can`t be greater than 5"
+                                "rganisational Ability field value can`t be greater than 5"
                               )
                             );
                           } else {
                             if (sprt == null || sprt == "") {
-                              $(toastr.error("Sport field can`t be empty"));
+                              $(toastr.error("Obedience field can`t be empty"));
                             } else {
                               if (sprt > 5) {
                                 $(
                                   toastr.error(
-                                    "Sport field value can`t be greater than 5"
+                                    "Obedience field value can`t be greater than 5"
                                   )
                                 );
                               } else {
                                 if (soci == null || soci == "") {
                                   $(
                                     toastr.error(
-                                      "Societies field can`t be empty"
+                                      "Attitude to Work field can`t be empty"
                                     )
                                   );
                                 } else {
                                   if (soci > 5) {
                                     $(
                                       toastr.error(
-                                        "Societies field value is empty"
+                                        "Attitude to Work field value is empty"
                                       )
                                     );
                                   } else {
                                     if (yth == null || yth == "") {
                                       $(
                                         toastr.error(
-                                          "Youth Organ field is empty"
+                                          "Activeness in class field is empty"
                                         )
                                       );
                                     } else {
                                       if (yth > 5) {
                                         $(
                                           toastr.error(
-                                            "Youth organ field value can`t be greater than 5"
+                                            "Activeness in class field value can`t be greater than 5"
                                           )
                                         );
                                       } else {
                                         if (aes == null || aes == "") {
                                           $(
                                             toastr.error(
-                                              "Aesthetics field is empty"
+                                              "Co-operation field is empty"
                                             )
                                           );
                                         } else {
                                           if (aes > 5) {
                                             $(
                                               toastr.error(
-                                                "Aesthetics field value can`t be greater than 5"
+                                                "Co-operation field value can`t be greater than 5"
                                               )
                                             );
                                           } else {

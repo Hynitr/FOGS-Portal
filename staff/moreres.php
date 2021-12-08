@@ -113,7 +113,7 @@ $qw2  = mysqli_fetch_array($res2);
     <table class="table table-hover text-center table-bordered table-striped">
         <?php
 
-        if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
             echo '
 
@@ -185,7 +185,7 @@ if($tms == "1st Term"){
     }
     }
     
-    if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+    if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
         echo '
 

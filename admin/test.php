@@ -3,7 +3,7 @@ include("functions/init.php");
 
 //echo "https://student.dagloremodelschool.com.ng/qrnt";
 
-    $e = rand(0, 9999);
+    /*$e = rand(0, 9999);
 
 	$sch = $_SESSION['cal']['adm'];;
 	$cat = "STAFF";
@@ -15,4 +15,6 @@ include("functions/init.php");
     echo $code.'<br/>'.$d;
 //echo $call['stud']."/qrnt";
   
-//echo strtotime($);
+//echo strtotime($);*/
+
+echo md5('dya@cjs.');

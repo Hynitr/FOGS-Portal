@@ -61,19 +61,18 @@ $rower = mysqli_fetch_array($res);
                         <div class="form-group">
                             <div class="row">
 
-
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Attendance.:</label>
+                                            <label for="exampleInputEmail1">Carrying Out Assignment.:</label>
 
-                                            <input type="number" name="date" id="attd" placeholder="Attendance"
-                                                class="form-control">
+                                            <input type="number" name="date" id="attd"
+                                                placeholder="Carrying Out Assignment" class="form-control">
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Punctuality.:</label>
-                                            <input type="number" name="month" id="punc" placeholder="Punctuality"
+                                            <label for="exampleInputEmail1">Politeness.:</label>
+                                            <input type="number" name="month" id="punc" placeholder="Politeness"
                                                 class="form-control">
                                         </div>
                                         <!-- /.input group -->
@@ -90,15 +89,15 @@ $rower = mysqli_fetch_array($res);
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Non-aggr.:</label>
-                                            <input type="number" name="year" id="nonaggr"
-                                                placeholder="Non Aggresiveness" class="form-control">
+                                            <label for="exampleInputEmail1">Self Control.:</label>
+                                            <input type="number" name="year" id="nonaggr" placeholder="Self Control"
+                                                class="form-control">
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Leadership Skill.:</label>
-                                            <input type="number" name="year" id="ldsk" placeholder="Leadership Skill"
-                                                class="form-control">
+                                            <label for="exampleInputEmail1">Organisational Ability.:</label>
+                                            <input type="number" name="year" id="ldsk"
+                                                placeholder="Organisational Ability" class="form-control">
                                         </div>
                                         <!-- /.input group -->
 
@@ -109,33 +108,33 @@ $rower = mysqli_fetch_array($res);
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Sport.:</label>
-                                            <input type="number" name="date" id="sprt" placeholder="Sport"
+                                            <label for="exampleInputEmail1">Obedience.:</label>
+                                            <input type="number" name="date" id="sprt" placeholder="Obedience"
                                                 class="form-control">
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Societies.:</label>
-                                            <input type="number" name="month" id="soci" placeholder="Societies"
+                                            <label for="exampleInputEmail1">Attitude to Work.:</label>
+                                            <input type="number" name="month" id="soci" placeholder="Attitude to Work"
                                                 class="form-control">
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Youth Organ.:</label>
-                                            <input type="number" name="year" id="yth" placeholder="Youth Organ"
+                                            <label for="exampleInputEmail1">Activeness in class.:</label>
+                                            <input type="number" name="year" id="yth" placeholder="Activeness in class"
                                                 class="form-control">
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Aesthetics.:</label>
-                                            <input type="number" name="year" id="aes" placeholder="Aesthetics"
+                                            <label for="exampleInputEmail1">Co-operation.:</label>
+                                            <input type="number" name="year" id="aes" placeholder="Co-operation"
                                                 class="form-control">
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-4">
                                             <label for="exampleInputEmail1">Relationship with others.:</label>
-                                            <input type="number" name="year" id="rel" placeholder="Relationship"
-                                                class="form-control">
+                                            <input type="number" name="year" id="rel"
+                                                placeholder="Relationship with others" class="form-control">
                                         </div>
 
                                         <div class="form-group col-md-3" hidden>
