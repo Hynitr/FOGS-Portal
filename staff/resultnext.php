@@ -138,22 +138,22 @@ $rower = mysqli_fetch_array($res);
                                                 class="form-control">
                                         </div>
 
-                                        <div class="form-group col-md-3">
+                                        <div class="form-group col-md-3" hidden>
                                             <label for="exampleInputEmail1">Times school opened.:</label>
-                                            <input type="number" name="year" id="tso" placeholder="Times school opened"
-                                                class="form-control">
+                                            <input type="number" name="year" id="tso" value='0'
+                                                placeholder="Times school opened" class="form-control">
                                         </div>
 
-                                        <div class="form-group col-md-3">
+                                        <div class="form-group col-md-3" hidden>
                                             <label for="exampleInputEmail1">Times student absent.:</label>
-                                            <input type="number" name="year" id="tsa" placeholder="Times student absent"
-                                                class="form-control">
+                                            <input type="number" name="year" id="tsa" value='0'
+                                                placeholder="Times student absent" class="form-control">
                                         </div>
 
-                                        <div class="form-group col-md-3">
+                                        <div class="form-group col-md-3" hidden>
                                             <label for="exampleInputEmail1">Times student present.:</label>
                                             <input type="number" name="year" id="tsp"
-                                                placeholder="Times student present" class="form-control">
+                                                placeholder="Times student present" value='0' class="form-control">
                                         </div>
 
 
@@ -331,7 +331,7 @@ echo '<input type="text" name="year" id="pro" value="null" class="form-control" 
                                         <?php
 }
 ?>
-                                        <div class="form-group col-md-3">
+                                        <div class="form-group col-md-12">
                                             <label for="exampleInputEmail1">School Resumes .:</label>
                                             <input type="date" name="resmes" id="resmes" class="form-control">
                                         </div>
