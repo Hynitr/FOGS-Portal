@@ -330,14 +330,14 @@ $(document).ready(function () {
                                     if (yth == null || yth == "") {
                                       $(
                                         toastr.error(
-                                          "Activeness in class field is empty"
+                                          "Attentiveness in class field is empty"
                                         )
                                       );
                                     } else {
                                       if (yth > 5) {
                                         $(
                                           toastr.error(
-                                            "Activeness in class field value can`t be greater than 5"
+                                            "Attentiveness in class field value can`t be greater than 5"
                                           )
                                         );
                                       } else {

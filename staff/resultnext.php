@@ -120,9 +120,9 @@ $rower = mysqli_fetch_array($res);
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
-                                            <label for="exampleInputEmail1">Activeness in class.:</label>
-                                            <input type="number" name="year" id="yth" placeholder="Activeness in class"
-                                                class="form-control">
+                                            <label for="exampleInputEmail1">Attentiveness in class.:</label>
+                                            <input type="number" name="year" id="yth"
+                                                placeholder="Attentiveness in class" class="form-control">
                                         </div>
                                         <!-- /.input group -->
                                         <div class="form-group col-md-2">
