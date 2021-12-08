@@ -151,7 +151,7 @@ $hrt = $wsa['tot'];
                             ?>
 
                                 <!-- /.input group -->
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-2" hidden>
                                     <label for="exampleInputEmail1">Position in Class .:</label>
                                     <input type="text" name="year" id="position" placeholder="1st, 2nd, 3rd e.t.c"
                                         class="form-control" value="<?php echo $row['position']; ?>">

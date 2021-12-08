@@ -127,7 +127,6 @@ $qw2  = mysqli_fetch_array($res2);
             <th>2nd Term <br />Score</th>
             <th>3rd Term <br />Score</th>
             <th>Annual <br />Score</th>
-            <th>Position</th>
             <th>Grade</th>
             <th>Remark</th>
         </tr>
@@ -150,7 +149,6 @@ $qw2  = mysqli_fetch_array($res2);
             <th>2nd Term <br />Score</th>
             <th>3rd Term <br />Score</th>
             <th>Annual <br />Score</th>
-            <th>Position</th>
             <th>Grade</th>
             <th>Remark</th>
         </tr>
@@ -199,7 +197,6 @@ if($tms == "1st Term"){
         <td>'.$row2['sndscore'].'</td>
         <td>'.$row2['tscore'].'</td>
         <td>'.$annual.'</td>
-        <td>'.$row['position'].'</td>
         <td>'.$row['grade'].'</td>
         <td>'.$row['remark'].'</td>
         </tr>
@@ -221,7 +218,6 @@ if($tms == "1st Term"){
         <td>'.$row2['sndscore'].'</td>
         <td>'.$row2['tscore'].'</td>
         <td>'.$annual.'</td>
-        <td>'.$row['position'].'</td>
         <td>'.$row['grade'].'</td>
         <td>'.$row['remark'].'</td>
         </tr>

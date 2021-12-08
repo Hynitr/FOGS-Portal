@@ -288,10 +288,10 @@ $rower = mysqli_fetch_array($res);
                                 ?>
 
                                 <!-- /.input group -->
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-2" hidden>
                                     <label for="exampleInputEmail1">Position in Class .:</label>
-                                    <input type="text" name="year" id="position" placeholder="1st, 2nd, 3rd e.t.c"
-                                        class="form-control">
+                                    <input type="text" name="year" value='0' id="position"
+                                        placeholder="1st, 2nd, 3rd e.t.c" class="form-control">
                                     <!--<select id="position" class="form-control">
                                         <option id="position">1st</option>
                                         <option id="position">2nd</option>
