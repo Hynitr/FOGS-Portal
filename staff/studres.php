@@ -155,8 +155,8 @@ $rower = mysqli_fetch_array($res);
                                                 </td>
                                                 
                                                 <td>'.$row['test'].'</td>
-                                                <td>'.$row['classex'].'</td>
                                                 <td>'.$row['ass'].'</td>
+                                                <td>'.$row['classex'].'</td>
                                                 <td>'.$row['exam'].'</td>
                                                 <td>'.$row['total'].'</td>
                                                 <td>'.$row['grade'].'</td>
