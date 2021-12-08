@@ -90,13 +90,13 @@ $hrt = $wsa['tot'];
                             echo ' 
                             
                             <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">CAT 1(5) .:</label>
+                                    <label for="exampleInputEmail1">CAT 1(10) .:</label>
                                     <input type="number" name="date" id="test" value="'.$row['test'].'"
                                 placeholder="CAT 1(5)" class="form-control">
                             </div>
                             <!-- /.input group -->
                             <div class="form-group col-md-2">
-                                <label for="exampleInputEmail1">CAT 2(5).:</label>
+                                <label for="exampleInputEmail1">CAT 2(10).:</label>
                                 <input type="number" name="month" id="ass" value="'.$row['ass'].'"
                                 placeholder="CAT 2(5)" class="form-control">
                             </div>
@@ -108,7 +108,7 @@ $hrt = $wsa['tot'];
                             </div>
                             <!-- /.input group -->
                             <div class="form-group col-md-2">
-                                <label for="exampleInputEmail1">Exam(90) .:</label>
+                                <label for="exampleInputEmail1">Exam(80) .:</label>
                                 <input type="number" name="year" id="exam" min="1" max="90"
                                     value="'.$row['exam'].'" placeholder="Exam(90)" class="form-control">
                             </div>

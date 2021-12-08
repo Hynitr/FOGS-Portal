@@ -78,7 +78,7 @@ $rower = mysqli_fetch_array($res);
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-nowrap table-bordered table-striped">
                         <?php
-                        if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+                        if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
                             echo '
 
@@ -134,8 +134,8 @@ $rower = mysqli_fetch_array($res);
         <td>'.$row['subject'].' 
 <a style="color: red;" href="./edit?id='.$data.'&sbj='.$row['subject'].'&tm='.$term.'&cls='.$cls.'&ses='.$ses.'"><br/>Edit</a>
                             </td>
-                            <td>'.$row['ass'].'</td>
                             <td>'.$row['test'].'</td>
+                            <td>'.$row['ass'].'</td>
                             <td>'.$row['exam'].'</td>
                             <td>'.$row['total'].'</td>
                             <td>'.$row['grade'].'</td>
@@ -153,9 +153,10 @@ $rower = mysqli_fetch_array($res);
                             <td>'.$row['subject'].' 
                     <a style="color: red;" href="./edit?id='.$data.'&sbj='.$row['subject'].'&tm='.$term.'&cls='.$cls.'&ses='.$ses.'"><br/>Edit</a>
                                                 </td>
-                                                <td>'.$row['ass'].'</td>
-                                                <td>'.$row['classex'].'</td>
+                                                
                                                 <td>'.$row['test'].'</td>
+                                                <td>'.$row['classex'].'</td>
+                                                <td>'.$row['ass'].'</td>
                                                 <td>'.$row['exam'].'</td>
                                                 <td>'.$row['total'].'</td>
                                                 <td>'.$row['grade'].'</td>
@@ -223,13 +224,13 @@ $rower = mysqli_fetch_array($res);
                                     echo '
 
                                     <div class="form-group col-md-2">
-                                    <label for="exampleInputEmail1">CAT 1(5) .:</label>
+                                    <label for="exampleInputEmail1">CAT 1(10) .:</label>
                                     <input type="number" name="date" id="test" placeholder="CAT 1(5)"
                                         class="form-control">
                                 </div>
                                 <!-- /.input group -->
                                 <div class="form-group col-md-3">
-                                    <label for="exampleInputEmail1">CAT 2(5).:</label>
+                                    <label for="exampleInputEmail1">CAT 2(10).:</label>
                                     <input type="number" name="month" id="ass" placeholder="CAT 2(5)"
                                         class="form-control">
                                 </div>
@@ -243,7 +244,7 @@ $rower = mysqli_fetch_array($res);
                                 </div>
                                 <!-- /.input group -->
                                 <div class="form-group col-md-3">
-                                    <label for="exampleInputEmail1">Exam(90) .:</label>
+                                    <label for="exampleInputEmail1">Exam(80) .:</label>
                                     <input type="number" name="year" id="exam" placeholder="Exam(90)"
                                         class="form-control">
                                 </div>
