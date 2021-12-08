@@ -78,7 +78,7 @@ $rower = mysqli_fetch_array($res);
                 <div class="card-body table-responsive p-0">
                     <table class="table table-hover text-nowrap table-bordered table-striped">
                         <?php
-                        if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
+                        if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
                             echo '
 
@@ -125,7 +125,7 @@ $rower = mysqli_fetch_array($res);
   while($row= mysqli_fetch_array($result_set))
  {
 
-    if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
+    if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
         echo '
 
@@ -219,7 +219,7 @@ $rower = mysqli_fetch_array($res);
 
                                 <?php 
 
-                                if($cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
+                            if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
                                     echo '
 
