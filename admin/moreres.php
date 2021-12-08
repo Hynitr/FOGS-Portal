@@ -113,7 +113,7 @@ $qw2  = mysqli_fetch_array($res2);
     <table class="table table-hover text-center table-bordered table-striped">
         <?php
 
-        if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
             echo '
 
@@ -127,6 +127,7 @@ $qw2  = mysqli_fetch_array($res2);
             <th>2nd Term <br />Score</th>
             <th>3rd Term <br />Score</th>
             <th>Annual <br />Score</th>
+            <th>Position</th>
             <th>Grade</th>
             <th>Remark</th>
         </tr>
@@ -149,6 +150,7 @@ $qw2  = mysqli_fetch_array($res2);
             <th>2nd Term <br />Score</th>
             <th>3rd Term <br />Score</th>
             <th>Annual <br />Score</th>
+            <th>Position</th>
             <th>Grade</th>
             <th>Remark</th>
         </tr>
@@ -183,7 +185,7 @@ if($tms == "1st Term"){
     }
     }
     
-    if($cls == 'Reception' || $cls == 'Transition' || $cls == 'Nido 1') {
+    if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls == 'Nursery 1') {
 
         echo '
 
@@ -197,6 +199,7 @@ if($tms == "1st Term"){
         <td>'.$row2['sndscore'].'</td>
         <td>'.$row2['tscore'].'</td>
         <td>'.$annual.'</td>
+        <td>'.$row['position'].'</td>
         <td>'.$row['grade'].'</td>
         <td>'.$row['remark'].'</td>
         </tr>
@@ -218,6 +221,7 @@ if($tms == "1st Term"){
         <td>'.$row2['sndscore'].'</td>
         <td>'.$row2['tscore'].'</td>
         <td>'.$annual.'</td>
+        <td>'.$row['position'].'</td>
         <td>'.$row['grade'].'</td>
         <td>'.$row['remark'].'</td>
         </tr>
@@ -249,24 +253,24 @@ if(row_count($result_set2) == "") {
 ?>
 
         <tr>
-            <td>Attendance</td>
+            <td>Carrying Out Assignment</td>
             <td><?php echo $row2['attendance'] ?></td>
-            <td>Sport</td>
+            <td>Obedience</td>
             <td><?php echo $row2['sport'] ?></td>
             <td><b>Mark Possible .:</b> &nbsp;&nbsp; <?php echo $row2['mrkpos'] ?></td>
             <td><b>Mark Obtained .:</b> &nbsp;&nbsp; <?php echo $row2['mrkobt'] ?></td>
         </tr>
         <tr>
-            <td>Punctuality</td>
+            <td>Politeness</td>
             <td><?php echo $row2['punctuality'] ?></td>
-            <td>Societies</td>
+            <td>Attitude to Work</td>
             <td><?php echo $row2['societies'] ?></td>
             <td colspan="2"><b>Percentage .:</b> &nbsp;&nbsp; <?php echo $row2['perc'] ?></td>
         </tr>
         <tr>
             <td>Honesty</td>
             <td><?php echo $row2['honesty'] ?></td>
-            <td>Youth Organ</td>
+            <td>Attentiveness in class</td>
             <td><?php echo $row2['youth'] ?></td>
             <td><b>Total Grade.:</b> &nbsp;&nbsp; <?php echo $row2['totgra'] ?></td>
             <?php
@@ -281,21 +285,17 @@ if(row_count($result_set2) == "") {
         <tr>
             <td>Neatness</td>
             <td><?php echo $row2['neatness'] ?></td>
-            <td>Aesthetics</td>
+            <td>Co-operation</td>
             <td><?php echo $row2['aesth'] ?></td>
             <td colspan="2" rowspan="6"><b>Principal Comment.:</b> &nbsp;&nbsp; <?php echo $row2['principal'] ?></td>
         </tr>
         <tr>
-            <td>Non-Aggressive</td>
+            <td>Self Control</td>
             <td><?php echo $row2['nonaggr'] ?></td>
         </tr>
         <tr>
-            <td>Leadership Skills</td>
+            <td>Organisational Ability</td>
             <td><?php echo $row2['leader'] ?></td>
-        </tr>
-        <tr>
-            <td>Relationship with others</td>
-            <td><?php echo $row2['relation'] ?></td>
         </tr>
         <tr>
             <td>Relationship with others</td>
