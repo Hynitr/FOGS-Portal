@@ -119,9 +119,9 @@ if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls
 
             <tr>
             <th>Subject</th>
-            <th width="90px">CAT 1 <br />(5)</th>
-            <th width="90px">CAT 2 <br />(5)</th>
-            <th>Exam Score<br>(90)</th>
+            <th width="90px">CAT 1 <br />(10)</th>
+            <th width="90px">CAT 2 <br />(10)</th>
+            <th>Exam Score<br>(80)</th>
             <th>Total<br>(100)</th>
             <th>1st Term <br />Score</th>
             <th>2nd Term <br />Score</th>
