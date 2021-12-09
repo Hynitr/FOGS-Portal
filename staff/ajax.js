@@ -54,7 +54,7 @@ $(document).ready(function () {
                   if (exam == null || exam == "") {
                     $(toastr.error("Exam can`t be empty"));
                   } else {
-                    if (exam > 90) {
+                    if (exam > 100) {
                       $(toastr.error("Exam score can`t be greater than 90"));
                     } else {
                       if (position == null || position == "") {
@@ -164,7 +164,7 @@ $(document).ready(function () {
                   if (exam == null || exam == "") {
                     $(toastr.error("Exam can`t be empty"));
                   } else {
-                    if (exam > 90) {
+                    if (exam > 100) {
                       $(toastr.error("Exam score can`t be greater than 90"));
                     } else {
                       if (position == null || position == "") {
