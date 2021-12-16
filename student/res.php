@@ -287,7 +287,8 @@ if(row_count($result_set2) == "") {
             <td><?php echo $row2['neatness'] ?></td>
             <td>Co-operation</td>
             <td><?php echo $row2['aesth'] ?></td>
-            <td colspan="2" rowspan="6"><b>Principal Comment.:</b> &nbsp;&nbsp; <?php echo $row2['principal'] ?></td>
+            <td colspan="2" rowspan="6"><b>Principal Comment.:</b> &nbsp;&nbsp;
+                <?php echo ucwords($row2['principal']) ?></td>
         </tr>
         <tr>
             <td>Self Control</td>
