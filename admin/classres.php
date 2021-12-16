@@ -67,7 +67,7 @@ while ($rw = mysqli_fetch_array($ww)) {
                                             <td><?php echo $rw['mrkobt'] ?></td>
                                             <td><?php echo $rw['perc'] ?></td>
                                             <td><?php echo $rw['totgra'] ?></td>
-                                            <td><?php echo $rw['principal'] ?></td>
+                                            <td><?php echo ucwords($rw['principal']) ?></td>
                                             <?php echo '
                                                     <td ><a href="./moreres?id='.$rw['admno'].'&cls='.$data.'&term='.$tms.'&ses='.$ses.'">View Full Result</a></td>';
                                                     ?>
