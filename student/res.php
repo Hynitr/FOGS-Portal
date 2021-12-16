@@ -33,6 +33,90 @@ $qw1  = mysqli_fetch_array($res1);
 $sql5 = "SELECT * FROM students WHERE `AdminID` = '$data'";
 $res2 = query($sql5);
 $qw2  = mysqli_fetch_array($res2);
+
+//percentage calculations
+$pee = "SELECT sum(sn) AS pss FROM result WHERE `admno` = '$data' AND `class` = '$cls' AND `term` = '$tms' AND `ses` = '$ses'";
+$pes = "SELECT sum(total) AS mobt FROM result WHERE `admno` = '$data' AND `class` = '$cls' AND `term` = '$tms' AND `ses` = '$ses'";
+$ds   = query($pee);
+$ress = query($pes);
+$dws  = mysqli_fetch_array($ds); 
+$pos  = mysqli_fetch_array($ress);
+
+ $mrkpos  = $dws['pss'] * 100;
+ $mrkobt  = $pos['mobt'];
+ if ($mrkpos == 0 && $mrkobt == 0) {
+  
+  $perc = 0;
+  $grade = 0;
+ } else {
+ $perc    = ($mrkobt/$mrkpos) * 100;
+
+ if ($perc <= 39) {
+    
+    $grade  = "F9 - Fail";
+   
+     } else {
+
+  if ($perc <= 44) {
+    
+  $grade  = "E8 - Pass";
+  
+  } else {
+
+  if ($perc <= 49) {
+
+  $grade  = "D7 - Pass";
+ 
+  } else {
+
+  if ($perc <= 54) {
+  
+  $grade  = "C6 - Credit";
+  
+  } else {
+
+  if ($perc <= 59) {
+  
+  $grade  = "C5 - Credit";
+ 
+  } else {
+
+  if ($perc <= 64) {
+
+  $grade  = "B3 - Good";
+ 
+  } else {
+
+  if ($perc <= 69) {
+  
+  $grade  = "B2 - Very Good";
+ 
+  } else {
+
+  if ($perc <= 89) {
+  
+  $grade  = "A1 - Excellent";
+ 
+  } else {
+
+  if ($perc <= 100) {
+
+  $grade  = "A* - Distinction";
+ 
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+  }
+}
+
+//update new details'
+$updls = "UPDATE motor SET `mrkpos` = '$mrkpos', `mrkobt` = '$mrkobt', `perc` = '$perc', `totgra` = '$grade' WHERE `admno` = '$data' AND `class` = '$cls' AND `term` = '$tms' AND `ses` = '$ses'";
+$updlslq = query($updls);
 ?>
 
 <!DOCTYPE html>
@@ -127,7 +211,6 @@ if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls
             <th>2nd Term <br />Score</th>
             <th>3rd Term <br />Score</th>
             <th>Annual <br />Score</th>
-            <th>Position</th>
             <th>Grade</th>
             <th>Remark</th>
         </tr>
@@ -150,7 +233,6 @@ if($cls == 'Transition' || $cls == 'Reception' || $cls == 'Kindergarten' || $cls
             <th>2nd Term <br />Score</th>
             <th>3rd Term <br />Score</th>
             <th>Annual <br />Score</th>
-            <th>Position</th>
             <th>Grade</th>
             <th>Remark</th>
         </tr>
@@ -199,7 +281,6 @@ if($tms == "1st Term"){
         <td>'.$row2['sndscore'].'</td>
         <td>'.$row2['tscore'].'</td>
         <td>'.$annual.'</td>
-        <td>'.$row['position'].'</td>
         <td>'.$row['grade'].'</td>
         <td>'.$row['remark'].'</td>
         </tr>
@@ -221,7 +302,6 @@ if($tms == "1st Term"){
         <td>'.$row2['sndscore'].'</td>
         <td>'.$row2['tscore'].'</td>
         <td>'.$annual.'</td>
-        <td>'.$row['position'].'</td>
         <td>'.$row['grade'].'</td>
         <td>'.$row['remark'].'</td>
         </tr>
@@ -257,22 +337,22 @@ if(row_count($result_set2) == "") {
             <td><?php echo $row2['attendance'] ?></td>
             <td>Obedience</td>
             <td><?php echo $row2['sport'] ?></td>
-            <td><b>Mark Possible .:</b> &nbsp;&nbsp; <?php echo $row2['mrkpos'] ?></td>
-            <td><b>Mark Obtained .:</b> &nbsp;&nbsp; <?php echo $row2['mrkobt'] ?></td>
+            <td><b>Mark Possible .:</b> &nbsp;&nbsp; <?php echo $mrkpos ?></td>
+            <td><b>Mark Obtained .:</b> &nbsp;&nbsp; <?php echo $mrkobt ?></td>
         </tr>
         <tr>
             <td>Politeness</td>
             <td><?php echo $row2['punctuality'] ?></td>
             <td>Attitude to Work</td>
             <td><?php echo $row2['societies'] ?></td>
-            <td colspan="2"><b>Percentage .:</b> &nbsp;&nbsp; <?php echo $row2['perc'] ?></td>
+            <td colspan="2"><b>Percentage .:</b> &nbsp;&nbsp; <?php echo(round($perc,1)); ?>%</td>
         </tr>
         <tr>
             <td>Honesty</td>
             <td><?php echo $row2['honesty'] ?></td>
             <td>Attentiveness in class</td>
             <td><?php echo $row2['youth'] ?></td>
-            <td><b>Total Grade.:</b> &nbsp;&nbsp; <?php echo $row2['totgra'] ?></td>
+            <td><b>Total Grade.:</b> &nbsp;&nbsp; <?php echo $grade ?></td>
             <?php
     if (isset($_SESSION['rep'])) {
    $wed = $_SESSION['rep'];
