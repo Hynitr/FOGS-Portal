@@ -274,7 +274,7 @@ function img_stud($target_file) {
 
 
 //--------------- edit student details -----------//
-if(isset($_POST['surname']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['date']) && isset($_POST['mth']) && isset($_POST['year']) && isset($_POST['gender']) && isset($_POST['schlst']) && isset($_POST['classr']) && isset($_POST['dept']) && isset($_POST['parent']) && isset($_POST['relation']) && isset($_POST['occupation']) && isset($_POST['add']) && isset($_POST['dnum']) && isset($_POST['mnum']) && isset($_POST['pword']) && isset($_POST['rpword']) && isset($_POST['acf']) && isset($_POST['schf']) && isset($_POST['adm'])) {
+if(isset($_POST['surname']) && isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['date']) && isset($_POST['mth']) && isset($_POST['year']) && isset($_POST['gender']) && isset($_POST['schlst']) && isset($_POST['classr']) && isset($_POST['dept']) && isset($_POST['parent']) && isset($_POST['relation']) && isset($_POST['occupation']) && isset($_POST['add']) && isset($_POST['dnum']) && isset($_POST['mnum']) && isset($_POST['pword']) && isset($_POST['rpword']) && isset($_POST['acf']) && isset($_POST['schf']) && isset($_POST['adm']) && isset($_POST['feestat'])) {
 
 
 		$surname 			= clean($_POST['surname']);
@@ -298,13 +298,14 @@ if(isset($_POST['surname']) && isset($_POST['firstname']) && isset($_POST['lastn
 		$schf 				= clean($_POST['schf']);
 		$acf    			= clean($_POST['acf']);
 		$data    			= clean($_POST['adm']);
+		$feestat			= clean($_POST['feestat']);
 
-uenrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $schlst, $class, $dept, $parent, $relation, $occupation, $add, $dnum, $mnum, $pword, $rpword, $schf, $acf, $data);
+uenrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $schlst, $class, $dept, $parent, $relation, $occupation, $add, $dnum, $mnum, $pword, $rpword, $schf, $acf, $data, $feestat);
 }
 
 
 //enroll
-function uenrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $schlst, $class, $dept, $parent, $relation, $occupation, $add, $dnum, $mnum, $pword, $rpword, $schf, $acf, $data) {
+function uenrol($surname, $firstname, $lastname, $date, $month, $year, $gender, $schlst, $class, $dept, $parent, $relation, $occupation, $add, $dnum, $mnum, $pword, $rpword, $schf, $acf, $data, $feestat) {
 
 	$sname 				= escape($surname);
 	$fname 				= escape($firstname);
@@ -329,7 +330,7 @@ function uenrol($surname, $firstname, $lastname, $date, $month, $year, $gender, 
 
 	
 
-	$sql2 = "UPDATE students SET  `SurName` = '$sname', `Middle Name` = '$fname', `Last Name` = '$lname', `cbk` =  '$rpwor' ='$pwor', `suF` = '$pwor', `Date` = '$day', `Month` = '$mont', `Year`= '$yea', `Gender`='$gend', `schlst` = '$schl', `parent` = '$paren', `relation`= '$rel', `occupation` = '$occ', `Telephone1`= '$dnu', `Address 1` = '$ad', `Telephone2` = '$mnu', `Class` = '$cls', `Department`= '$dep', `Active` = '0', `SchF` = '$sh', `AcF` =  '$ac' WHERE `AdminID` = '$data'";
+	$sql2 = "UPDATE students SET  `SurName` = '$sname', `Middle Name` = '$fname', `Last Name` = '$lname', `cbk` =  '$rpwor' ='$pwor', `suF` = '$pwor', `Date` = '$day', `Month` = '$mont', `Year`= '$yea', `Gender`='$gend', `schlst` = '$schl', `parent` = '$paren', `relation`= '$rel', `occupation` = '$occ', `Telephone1`= '$dnu', `Address 1` = '$ad', `Telephone2` = '$mnu', `Class` = '$cls', `Department`= '$dep', `Active` = '0', `SchF` = '$sh', `AcF` =  '$ac', `fee` = '$feestat' WHERE `AdminID` = '$data'";
 $rews = query($sql2);
 
 $_SESSION['dcer'] = $data;

@@ -174,6 +174,7 @@ $(document).ready(function () {
     var acf = $("#acf").val();
     var schf = $("#schf").val();
     var adm = $("#idn").val();
+    var feestat = $('#feestat').val();
 
     if (surname == null || surname == "") {
       $(toastr.error("Kindly input Surname"));
@@ -235,6 +236,7 @@ $(document).ready(function () {
                               acf: acf,
                               schf: schf,
                               adm: adm,
+                              feestat: feestat,
                             },
                             success: function (data) {
                               $(toastr.error(data)).html(data);

@@ -303,10 +303,22 @@ if (!isset($_GET['id'])) {
                                             <input type="number" name="schf" id="schf" class="form-control"
                                                 value="<?php echo $row['SchF'] ?>" required>
                                         </div>
+
                                     </div>
                                     <!-- /.input group -->
                                 </div>
                                 <!-- /.form group -->
+
+                                <div class="form-group">
+                                    <label>Fee Status.:</label>
+                                    <select name="feestat" id="feestat" value="<?php echo $row['fee'] ?>"
+                                        class="custom-select">
+                                        <option name="feestat" id="feestat"><?php echo $row['fee'] ?></option>
+                                        <option name="feestat" id="feestat">paid</option>
+                                        <option name="feestat" id="feestat">unpaid</option>
+
+                                    </select>
+                                </div>
 
                             </div>
                             <input type="text" id="idn" value="<?php echo $data ?>" hidden>
