@@ -16,6 +16,16 @@ $tms  =  $_GET['term'];
 $cls  =  $_GET['cls'];
 $ses  =  $_GET['ses'];
 
+$chck = "SELECT * FROM students WHERE `AdminID` = '$data'";
+$chsl = query($chck);
+$rft  = mysqli_fetch_array($chsl);
+
+if($rft['fee'] == 'unpaid') {
+
+    echo  "Result has been disabled. Kindly pay up your school fee to view result! <br/><a href='#' onclick='goBack()';>Click here to go back</a>";
+
+} else {
+
 $sql3 = "SELECT * FROM `motor` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses'";
 $result_set3 = query($sql3);
 $row3 = mysqli_fetch_array($result_set3);
@@ -392,6 +402,7 @@ window.addEventListener("load", window.print());
 
 </html>
 <?php
+  }
 }
 }
 }
