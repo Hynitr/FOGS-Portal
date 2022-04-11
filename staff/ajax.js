@@ -135,6 +135,7 @@ $(document).ready(function () {
     var cla = $("#cla").val();
     var tms = $("#term").val();
     var ses = $("#ses").val();
+    var reltdet = $("#reltdet").val();
 
     if (stsbj == null || stsbj == "") {
       $(toastr.error("Subject can`t be empty"));
@@ -185,6 +186,7 @@ $(document).ready(function () {
                             cla: cla,
                             tms: tms,
                             ses: ses,
+                            reltdet: reltdet,
                           },
                           success: function (data) {
                             $(toastr.error(data)).html(data);

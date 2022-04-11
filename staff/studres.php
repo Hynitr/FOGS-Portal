@@ -427,7 +427,7 @@ $rower = mysqli_fetch_array($res);
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Subject Uploaded</span>
                             </div>
-                            <select id="position" class="form-control">
+                            <select id="sbjjr" class="form-control">
                                 <?php
                  
  $sql= "SELECT * FROM `result` WHERE `admno` = '$data' AND `term` = '$term' AND `ses` = '$ses'";;
