@@ -10,9 +10,6 @@ if (!isset($_GET['id'])) {
 
   $_SESSION['staffid'] = $_GET['id'];
 }
-if (isset($_SESSION['staffid'])) {
- unset($_SESSION['staffid']);
-}
 ?>
 
 <!-- Content Wrapper. Contains page content -->
