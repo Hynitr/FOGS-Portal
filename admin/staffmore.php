@@ -7,6 +7,8 @@ if (!isset($_GET['id'])) {
 } else {
 
   $data = $_GET['id'];
+
+  $_SESSION['staffid'] = $_GET['id'];
 }
 if (isset($_SESSION['staffid'])) {
  unset($_SESSION['staffid']);
@@ -224,7 +226,7 @@ if (isset($_SESSION['staffid'])) {
                                                 <div class="timeline-body">
 
                                                     <div class="timeline-footer">
-                                                        <a target="_blank" href="./atcard?id=<?php echo $data ?>"
+                                                        <a target="_blank" href="qr/indexs.php"
                                                             class="btn btn-warning btn-flat btn-sm">Print ID Card</a>
                                                     </div>
 

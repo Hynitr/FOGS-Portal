@@ -6,7 +6,8 @@ if (!isset($_SESSION['staffid'])) {
 
 }
 
- $sql ="SELECT * FROM staff WHERE `staffid` = '".$_SESSION["staffid"]."'";
+
+    $sql ="SELECT * FROM staff WHERE `staffid` = '".$_SESSION["staffid"]."'";
     $result = query($sql);
     if(row_count($result) >= 1) {
     $row = mysqli_fetch_array($result);
