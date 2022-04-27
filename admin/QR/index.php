@@ -2,7 +2,7 @@
 require ("../functions/init.php");
 if (!isset($_SESSION['code'])) {
 
-    redirect("./enroll");
+    redirect("../enroll");
 
 }
 

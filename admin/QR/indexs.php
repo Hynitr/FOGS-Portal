@@ -2,7 +2,7 @@
 require ("../functions/init.php");
 if (!isset($_SESSION['staffid'])) {
 
-    redirect("./appoint");
+    redirect("../appoint");
 
 }
 

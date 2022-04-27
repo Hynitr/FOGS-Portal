@@ -226,7 +226,7 @@ if (isset($_SESSION['staffid'])) {
                                                 <div class="timeline-body">
 
                                                     <div class="timeline-footer">
-                                                        <a target="_blank" href="qr/indexs.php"
+                                                        <a target="_blank" href="QR/indexs.php"
                                                             class="btn btn-warning btn-flat btn-sm">Print ID Card</a>
                                                     </div>
 
