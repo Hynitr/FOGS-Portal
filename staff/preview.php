@@ -60,7 +60,7 @@ $ws = $row['staffclass'];
 
                                 </select>
 
-                                <input type="text" id="class" value="<?php echo $ws ?>" hidden>
+
 
 
                                 <br /><br />
@@ -80,6 +80,28 @@ while ($rw = mysqli_fetch_array($ww)) {
                                 ?>
                                     </select>
                                 </div>
+
+                                <label>Select Class.:</label>
+                                <select name="class" id="class" class="custom-select">
+                                    <option name="class" id="class">Reception</option>
+                                    <option name="class" id="class">Transition</option>
+                                    <option name="class" id="class">Kindergarten</option>
+                                    <option name="class" id="class">Nursery 1</option>
+                                    <option name="class" id="class">Nursery 2</option>
+                                    <option name="class" id="class">Grade 1</option>
+                                    <option name="class" id="class">Grade 2</option>
+                                    <option name="class" id="class">Grade 3</option>
+                                    <option name="class" id="class">Grade 4</option>
+                                    <option name="class" id="class">Grade 5</option>
+                                    <option name="class" id="class">J.S.S 1</option>
+                                    <option name="class" id="class">J.S.S 2</option>
+                                    <option name="class" id="class">J.S.S 3</option>
+                                    <option name="class" id="class">S.S.S 1</option>
+                                    <option name="class" id="class">S.S.S 2</option>
+                                    <option name="class" id="class">S.S.S 3</option>
+                                </select>
+                                <br /><br />
+
 
                                 <label>Select a Term.:</label>
                                 <select name="class" id="term" class="custom-select">

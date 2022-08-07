@@ -523,7 +523,7 @@ $row2= mysqli_fetch_array($result_set2);
             <th class="text-center" colspan="2">Academic Performance Summary</th>
         </tr>
         <?php
-$sql2 = "SELECT * FROM `motor` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses' AND `class` = '$cls'";
+$sql2 = "SELECT * FROM `motor` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses'";
 $result_set2 = query($sql2);
 $row2 = mysqli_fetch_array($result_set2);
 if(row_count($result_set2) == "") {
