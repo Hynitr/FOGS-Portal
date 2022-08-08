@@ -16,7 +16,7 @@ $tms  =  $_GET['term'];
 $cls  =  $_GET['cls'];
 $ses  =  $_GET['ses'];
 
-$sql3 = "SELECT * FROM `motor` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses'";
+$sql3 = "SELECT * FROM `motor` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses' AND `class` = '$cls'";";
 $result_set3 = query($sql3);
 $row3 = mysqli_fetch_array($result_set3);
 
