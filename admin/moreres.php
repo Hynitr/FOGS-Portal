@@ -186,8 +186,6 @@ $updlslq = query($updls);
             </h5>
             <h5 class="col-sm-6">Admission Number.: <b><?php echo $data ?></b></h5>
             <h5 class="col-sm-6">Class.: <b><?php echo $cls ?></b></h5>
-            <h5 class="col-sm-6">No on Roll.: <b><?php echo $qw1['altol'] ?></b></h5>
-            <h5 class="col-sm-6">Times Absent.: <b><?php echo $row3['tsa'] ?></b></h5>
             <h5 class="col-sm-6">School Resumes.:
                 <b><?php echo date('l, F d, Y ', strtotime($row3['resm'])); ?></b>
             </h5>

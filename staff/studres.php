@@ -430,16 +430,16 @@ $rower = mysqli_fetch_array($res);
                             <select id="sbjjr" class="form-control">
                                 <?php
                  
- $sql= "SELECT * FROM `result` WHERE `admno` = '$data' AND `term` = '$term' AND `ses` = '$ses'";;
- $result_set=query($sql);
- while($row= mysqli_fetch_array($result_set))
- {
-          ?>
+                                $sql= "SELECT * FROM `result` WHERE `admno` = '$data' AND `term` = '$term' AND `ses` = '$ses'";;
+                                $result_set=query($sql);
+                                while($row= mysqli_fetch_array($result_set))
+                                {
+                                        ?>
                                 <option id="sbjjr"><?php echo $row['subject']; ?></option>
 
                                 <?php
-                  }
-                  ?>
+                                }
+                                ?>
                             </select>
                             <input type="text" value="<?php echo $data; ?>" id="subbr" hidden>
                             <input type="text" value="<?php echo $term; ?>" id="trmr" hidden>

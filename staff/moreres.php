@@ -16,7 +16,7 @@ $tms  =  $_GET['term'];
 $cls  =  $_GET['cls'];
 $ses  =  $_GET['ses'];
 
-$sql3 = "SELECT * FROM `motor` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses' AND `class` = '$cls'";";
+$sql3 = "SELECT * FROM `motor` WHERE `admno` = '$data' AND `term` = '$tms' AND `ses` = '$ses' AND `class` = '$cls'";
 $result_set3 = query($sql3);
 $row3 = mysqli_fetch_array($result_set3);
 
@@ -186,8 +186,6 @@ $updlslq = query($updls);
             </h5>
             <h5 class="col-sm-6">Admission Number.: <b><?php echo $data ?></b></h5>
             <h5 class="col-sm-6">Class.: <b><?php echo $cls ?></b></h5>
-            <h5 class="col-sm-6">No on Roll.: <b><?php echo $qw1['altol'] ?></b></h5>
-            <h5 class="col-sm-6">Times Absent.: <b><?php echo $row3['tsa'] ?></b></h5>
             <h5 class="col-sm-6">School Resumes.:
                 <b><?php echo date('l, F d, Y ', strtotime($row3['resm'])); ?></b>
             </h5>
