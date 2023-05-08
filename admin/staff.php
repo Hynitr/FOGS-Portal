@@ -77,6 +77,22 @@ $q = mysqli_fetch_array($w);
                                             <?php echo '
                                                     <td ><a href="./staffmore?id='.$row['staffid'].'">View Full Profile</a></td>';
                                                     ?>
+                                            <?php 
+
+                                            if($row['active'] == 0) {
+
+                                                echo '
+                                                    <td ><a href="./restrict?id='.$row['staffid'].'&active=1">Restrict Staff</a></td>';
+
+                                            } else {
+
+                                                echo '
+                                                    <td ><a href="./restrict?id='.$row['staffid'].'&active=0">Unrestrict Staff</a></td>';
+
+                                            }
+                                            
+                                            
+                                                    ?>
 
                                         </tr>
                                         <?php

@@ -128,7 +128,7 @@ function validate_user_login() {
 
 function login_user($admission) {
 
-$sql = "SELECT * FROM `staff` WHERE `staffid` = '".escape($admission)."'";
+$sql = "SELECT * FROM `staff` WHERE `active` = 0 AND `staffid` = '".escape($admission)."'";
 $result = query($sql);
 if(row_count($result) == 1) {
 	$row = mysqli_fetch_array($result);
