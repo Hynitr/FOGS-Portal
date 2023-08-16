@@ -57,10 +57,10 @@ $rower = mysqli_fetch_array($res);
                         <?php echo $rower['SurName']." ".$rower['Middle Name']." ".$rower['Last Name'] ?></h3>
 
                     <div class="card-tools">
-                        <button type="button" id="del" data-toggle="modal" data-target="#modal-reset"
+                       <!-- <button type="button" id="del" data-toggle="modal" data-target="#modal-reset"
                             data-toggle="tooltip" title="Reset this result" class="btn btn-tool"><i
                                 class="fas fa-recycle"></i>
-                        </button>
+                        </button>-->
                         <button type="button" id="del" data-toggle="modal" data-target="#modal-delete"
                             data-toggle="tooltip" title="Delete a result" class="btn btn-tool"><i
                                 class="fas fa-trash"></i>
@@ -210,8 +210,38 @@ $rower = mysqli_fetch_array($res);
                     <form name="uploadQuestionaire" role="form">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Input Subject .:</label>
-                            <input type="text" class="form-control" id="stsbj"
-                                placeholder="Mathematics, English, Chemistry">
+
+
+                            <?php
+
+                            if($term == '1st Term') {
+
+                                echo ' <input type="text" class="form-control" id="stsbj"
+                                placeholder="Mathematics, English, Chemistry">';
+
+                            } else {
+
+                                echo'
+
+                                 <select id="stsbj" class="form-control">
+                                ';
+
+                                $snl= "SELECT * FROM `result` WHERE `class` = '$cls' AND `ses` = '$ses' GROUP BY `subject`";
+                                $resnlt_set=query($snl);
+                                 while($rnnw= mysqli_fetch_array($resnlt_set)) {
+
+                                    echo ' <option id="stsbj">'.$rnnw['subject'].'</option>';
+                                 }
+                                
+                                echo '
+
+                                    </select>
+
+                                ';
+                            }
+                            ?>
+                            
+                           
                         </div>
 
                         <div class="form-group">
@@ -298,7 +328,7 @@ $rower = mysqli_fetch_array($res);
                                         <option id="position">2nd</option>
                                         <option id="position">3rd</option>
                                         <?php
-                        $x = 4;
+                       /* $x = 4;
 
                         while($x <= $hrt) {
                             echo '
@@ -309,7 +339,7 @@ $rower = mysqli_fetch_array($res);
 
                           <br>';
                           $x++;
-                      }
+                      }*/
                       ?>
                                     </select>-->
 
@@ -430,7 +460,7 @@ $rower = mysqli_fetch_array($res);
                             <select id="sbjjr" class="form-control">
                                 <?php
                  
-                                $sql= "SELECT * FROM `result` WHERE `admno` = '$data' AND `term` = '$term' AND `ses` = '$ses'";;
+                                $sql= "SELECT * FROM `result` WHERE `admno` = '$data' AND `term` = '$term' AND `ses` = '$ses'";
                                 $result_set=query($sql);
                                 while($row= mysqli_fetch_array($result_set))
                                 {
@@ -532,6 +562,7 @@ $(function() {
 
 if(isset($_SESSION['del'])) {
    echo "<script>$(toastr.error('Subject Result Deleted Successfully'));</script>";
+   unset($_SESSION['del']);
  
 }
 
@@ -539,20 +570,20 @@ if(isset($_SESSION['del'])) {
 //notification for upload result
 if(isset($_SESSION['upup'])) {
    echo "<script>$(toastr.error('Result uploaded sucessfully'));</script>";
-
+   unset($_SESSION['upup']);
 }
 
 
 //notification for reset result
 if(isset($_SESSION['res'])) {
    echo "<script>$(toastr.error('Result resetted sucessfully'));</script>";
-
+   unset($_SESSION['res']);
 }
 
 //notification for update result
 if(isset($_SESSION['upupl'])) {
    echo "<script>$(toastr.error('Result updated sucessfully'));</script>";
-
+   unset($_SESSION['upupl']);
 }
 
 ?>

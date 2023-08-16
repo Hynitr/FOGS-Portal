@@ -361,7 +361,6 @@ if(isset($_SESSION['upupl'])) {
 //----------------update upload first term result subjects ----------///
 if (isset($_POST['stsbj']) && isset($_POST['test']) && isset($_POST['ass']) && isset($_POST['exc']) && isset($_POST['exam']) && isset($_POST['position']) && isset($_POST['name']) && isset($_POST['admis']) && isset($_POST['cla']) && isset($_POST['tms']) && isset($_POST['ses']) && isset($_POST['reltdet'])) {
 	
-
 	$stbj 		= clean($_POST['stsbj']);
 	$test 		= clean($_POST['test']);
 	$ass 		= clean($_POST['ass']);
@@ -451,8 +450,8 @@ if (isset($_POST['stsbj']) && isset($_POST['test']) && isset($_POST['ass']) && i
 			$sndscore = 0;
 			$tscore = 0;
 	
-			$ssl = "INSERT INTO score(`class`, `admno`, `subject`, `fscore`, `sndscore`, `tscore`, `term`, `ses`)";
-			$ssl.= "VALUES('$cla', '$admis', '$stbj', '$fscore', '$sndscore', '$tscore', '$term', '$ses')";
+			$ssl = "INSERT INTO score(`class`, `admno`, `subject`, `fscore`, `sndscore`, `tscore`, `ses`)";
+			$ssl.= "VALUES('$cla', '$admis', '$stbj', '$fscore', '$sndscore', '$tscore', '$ses')";
 			$qws = query($ssl);
 	
 		} else {
@@ -461,7 +460,7 @@ if (isset($_POST['stsbj']) && isset($_POST['test']) && isset($_POST['ass']) && i
 			
 			$sndscore =  $total;
 	
-			$ssl = "UPDATE score SET `sndscore` = '$sndscore'  WHERE `subject` = '$stbj' AND `class` = '$cla' AND `term` = '$term' AND `ses` = '$ses'";	
+			$ssl = "UPDATE score SET `sndscore` = '$sndscore'  WHERE `subject` = '$stbj' AND `class` = '$cla' AND `ses` = '$ses'";	
 			$qws = query($ssl);
 	
 	
@@ -471,7 +470,7 @@ if (isset($_POST['stsbj']) && isset($_POST['test']) && isset($_POST['ass']) && i
 			
 			$tscore =  $total;
 	
-			$ssl = "UPDATE score SET `tscore` = '$tscore'  WHERE `subject` = '$stbj' AND `class` = '$cla' AND `term` = '$term' AND `ses` = '$ses'";	
+			$ssl = "UPDATE score SET `tscore` = '$tscore'  WHERE `subject` = '$stbj' AND `class` = '$cla' AND `ses` = '$ses'";	
 			$qws = query($ssl);
 	
 	
@@ -512,12 +511,13 @@ echo '<script>window.location.href = "./studres?id='.$admis.'&cls='.$cla.'&term=
 //--------------------- delete subject results -------------------//
 if (isset($_POST['admr']) && isset($_POST['trmr']) && isset($_POST['ccsr']) && isset($_POST['sbjjr']) && isset($_POST['ses'])) {
 	
-	$adm     = $_POST['admr'];
-	$trm     = $_POST['trmr'];
-	$ccs     = $_POST['ccsr'];
-	$sbjj    = $_POST['sbjjr'];
-	$ses     = $_POST['ses'];
+	$adm     = clean(escape($_POST['admr']));
+	$trm     = clean(escape($_POST['trmr']));
+	$ccs     = clean(escape($_POST['ccsr']));
+	$sbjj    = clean(escape($_POST['sbjjr']));
+	$ses     = clean(escape($_POST['ses']));
 
+	//echo $sbjj;
 
 	$sql = "DELETE FROM result WHERE `admno` = '$adm' AND `term` = '$trm' AND `class` = '$ccs' AND `subject` = '$sbjj' AND `ses` = '$ses'";
 	$res = query($sql);

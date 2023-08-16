@@ -18,9 +18,12 @@ $rower = mysqli_fetch_array($res);
 
 
 //get previous data
-$sql = "SELECT * FROM result WHERE `class` = '$cls' AND `term` = '$term' AND `subject` = '$sbj' AND `admno` = '$data' AND `ses` = '$ses'";
+$sql = "SELECT * FROM `result` WHERE `admno` = '$data' AND `term` = '$term' AND `ses` = '$ses' AND `subject` = '$sbj'";
 $resu = query($sql);
 $row  = mysqli_fetch_array($resu);
+
+
+echo $row['test'];
 
 //get total number of students
 $dql = "SELECT sum(sn) AS tot FROM students WHERE `Class` = '$cls'";
@@ -160,7 +163,7 @@ $hrt = $wsa['tot'];
                                         <option id="position">2nd</option>
                                         <option id="position">3rd</option>
                                         <?php
-                        $x = 4;
+                        /*$x = 4;
 
                         while($x <= $hrt) {
                             echo '
@@ -171,7 +174,7 @@ $hrt = $wsa['tot'];
 
                           <br>';
                           $x++;
-                      }
+                      }*/
                       ?>
                                     </select>--->
 
